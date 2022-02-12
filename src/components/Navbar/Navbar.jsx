@@ -1,4 +1,4 @@
-import "./../App.css";
+import "./../../App.css";
 import classes from "./Navbar.module.css"
 
 const Navbar = () => {
