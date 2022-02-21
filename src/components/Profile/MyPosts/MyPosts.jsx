@@ -1,7 +1,9 @@
 import classes  from "./MyPosts.module.css"
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+    let postsElements = props.posts.map(p => <Post message ={p.post} likeCount = {p.likes} /> )
+
   return  <div className={classes.postsBlock}>
    <h2> My posts</h2>
     <div>
@@ -13,9 +15,7 @@ const MyPosts = () => {
       </div>
     </div>
     <div className={classes.posts}>
-     <Post message = "Hi, how are you?" likeCount = "15" />
-     <Post message = "It's my first post" likeCount = "20"/>
-
+        {postsElements}
     </div>
   </div>
 
