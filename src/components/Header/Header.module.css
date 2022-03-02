@@ -1,6 +1,7 @@
 .header {
     grid-area: h;
-    background-color: green;
+    background: rgb(61,58,180);
+    background: linear-gradient(45deg, rgba(61,58,180,1) 0%, rgba(253,110,29,1) 63%, rgba(252,219,69,1) 100%);
   }
   
   .header img {

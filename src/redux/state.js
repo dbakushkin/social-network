@@ -1,3 +1,5 @@
+import classes from "../components/Profile/ProfileInfo/ProfileInfo.module.css";
+
 let state = {
     profilePage: {
         posts: [
@@ -13,10 +15,10 @@ let state = {
             {id: 3, message: "Че как обстановка"}
         ],
         dialogs: [
-            {id: 1, name: "Стамеска"},
-            {id: 2, name: "Кум"},
-            {id: 3, name: "Полено"},
-            {id: 4, name: "Шуруповерт"}
+            {id: 1, name: "Стамеска", img:"https://cs13.pikabu.ru/avatars/3425/x3425772-1402976383.png"},
+            {id: 2, name: "Кум", img:"https://cs13.pikabu.ru/avatars/3425/x3425772-1402976383.png"},
+            {id: 3, name: "Полено", img:"https://cs13.pikabu.ru/avatars/3425/x3425772-1402976383.png"},
+            {id: 4, name: "Шуруповерт",img:"https://cs13.pikabu.ru/avatars/3425/x3425772-1402976383.png"}
         ]
 
     },
