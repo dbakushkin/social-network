@@ -3,10 +3,9 @@ import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
-    console.log(props)
     return <div>
         <ProfileInfo />
-        <MyPosts posts ={props.state.posts} />
+        <MyPosts posts ={props.profilePage.posts} updateNewPostText = {props.updateNewPostText} newPostText = {props.profilePage.newPostText} addPost={props.addPost} />
     </div>
 
 }
