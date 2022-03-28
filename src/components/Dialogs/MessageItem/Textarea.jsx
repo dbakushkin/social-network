@@ -2,13 +2,14 @@ import React from "react";
 
 const Textarea = (props) => {
     let addMessage = () => {
-        props.addMessage()
+        props.dispatch({type: "ADD-MESSAGE"})
     }
     let newMessageElement = React.createRef()
 
     let messageOnchange = () => {
         let text = newMessageElement.current.value
-        props.updateNewMessageText(text);
+        props.dispatch({type: "UPDATE-NEW-MESSAGE-TEXT",
+    newText: text});
     }
 
     return (
