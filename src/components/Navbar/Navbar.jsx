@@ -1,6 +1,7 @@
 import "./../../App.css";
 import classes from "./Navbar.module.css"
 import {NavLink} from "react-router-dom";
+import React from "react"
 
 const Navbar = () => {
   return  <nav className={classes.nav}>
