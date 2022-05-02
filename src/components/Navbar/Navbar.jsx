@@ -9,6 +9,9 @@ const Navbar = () => {
     <NavLink to="/profile" className = {({isActive}) => isActive ? classes.active : classes.item }>Profile</NavLink>
   </div>
   <div className={classes.item}>
+    <NavLink to="/users" className = {({isActive}) => isActive ? classes.active : classes.item }>Users</NavLink>
+  </div>
+  <div className={classes.item}>
     <NavLink to="/dialogs" className = {({isActive}) => isActive ? classes.active : classes.item }>Messages</NavLink>
   </div>
   <div className={classes.item}>

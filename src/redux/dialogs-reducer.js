@@ -7,7 +7,8 @@ let initialState = {
         { id: 2, message: "How are you" },
         { id: 3, message: "Че как обстановка" }
     ],
-    newMessagetext: "",
+
+    newMessageText: "",
 
     dialogs: [
         { id: 1, name: "Стамеска", img: "https://cs13.pikabu.ru/avatars/3425/x3425772-1402976383.png" },
@@ -19,17 +20,20 @@ let initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
+
     switch (action.type) {
-        case ADD_MESSAGE:
-            let newMessage = {
-                id: 4, message: state.newMessagetext
-            }
-            state.messages.push(newMessage)
-            state.newMessagetext = "";
-            return state
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessagetext = action.newText;
-            return state;
+        case ADD_MESSAGE: 
+            return {
+                ...state,
+                newMessageText: "",
+                messages: [...state.messages, { id: 4, message: state.newMessageText }]
+            
+        }
+        case UPDATE_NEW_MESSAGE_TEXT: 
+            return {
+                ...state,
+                newMessageText: action.newText
+        }
         default:
             return state
     }

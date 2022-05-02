@@ -8,8 +8,8 @@ const Dialogs = (props) => {
 
     let state = props.dialogsPage
 
-    let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} img={d.img} />);
-    let messagesElement = state.messages.map(m => <Message message={m.message} />);
+    let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} key = {d.id} id={d.id} img={d.img} />);
+    let messagesElement = state.messages.map(m => <Message message={m.message} key = {m.id} />);
 
     let addMessage = () => {
         props.addMessage()
@@ -30,7 +30,7 @@ const Dialogs = (props) => {
             <div className={classes.messages}>
                 {messagesElement}
                 <div>
-                    <textarea onChange={messageOnchange} name="" id="" cols="20" rows="5"></textarea>
+                    <textarea onChange={messageOnchange} value ={state.newMessageText} name="" id="" cols="20" rows="5"></textarea>
                     <button onClick={addMessage}>Add message</button>
                 </div>
             </div>
@@ -39,4 +39,4 @@ const Dialogs = (props) => {
     )
 }
 
-export default Dialogs
+export default Dialogs;
